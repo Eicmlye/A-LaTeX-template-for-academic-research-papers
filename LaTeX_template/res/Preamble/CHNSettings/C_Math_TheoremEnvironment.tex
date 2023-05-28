@@ -1,0 +1,92 @@
+% version 2023.0528.0943
+% PACKAGE {amsthm} OR {amsmath} required.
+% PACKAGE {ctex} required.
+
+% \newtheorem usage: 
+	%# \newtheorem{TheoremName}[Counter_countWith]{Title}[Counter_recountWhen]
+		%% TheoremName: name of the new theorem environment. Redefinition raises error. A new counter ,say Counter_TheoremName, with exactly the same name (so Counter_TheoremName is actually the counter TheoremName) will be built by default, and can be used as Counter_countWith in preceding environments. 
+		%% NOTICE that '*' is not detectable in TheoremName. 
+		%% Counter_countWith: [optional] DEFAULT: count with Counter_TheoremName; if valued, set Counter_TheoremName to Counter_countWith, and they will share the same counter. 
+		%% Title: text message. Set the title of the environment, like 'Theorem '. 
+		%% Counter_recountWhen: [optional] DEFAULT: count with the root counter (section in article document, and chapter in book document); if valued, recount when the counter Counter_recountWhen is activated. 
+		
+% Theorem environment usage: 
+	%# \begin{TheoremName}[Subtitle]
+	%# Statements
+	%# \end{TheoremName}
+
+% PACKAGE {ntheorem} required
+\usepackage[thmmarks]{ntheorem}
+% \newtheorem usage: 
+	%# {
+	%# \theorempreskipamount{DEFAULT: \topsep}
+		%% set space before the environment
+	%# \theorempostskipamount{DEFAULT: \topsep}
+		%% set space after the environment
+	%# \theoremstyle{DEFAULT: plain}
+		%% arguments: 
+			%# plain
+			%# break: use \\ after title and number
+			%# change: print number before title
+			%# changebreak
+			%# margin: print number in the left margin
+			%# marginbreak
+			%# nonumberplain: plain with no number
+			%# nonumberbreak: break with no number
+			%# empty: no title and no number
+	%# \theoremheaderfont{DEFAULT: \normalfont\bfseries}
+		%% \color{} should be added here
+	%# \theorembodyfont{DEFAULT: \itshape}
+	%# \theoremseparator{}
+		%% set seperator between title and statements
+	%# \theoremnumbering{DEFAULT: arabic}
+		%% arguments: 
+			%# arabic
+			%# alph
+			%# Alph
+			%# roman
+			%# Roman
+			%# greek
+			%# Greek
+			%# chinese
+			%# fnsymbol
+	%# \theoremsymbol{}
+		%% Package option [thmmarks] required.
+		%% When ended with single-lined equations, \theoremsymbol will not be printed. 
+		%% Text message. Set end symbol. 
+	%# \newframedtheorem{TheoremName}[Counter_countWith]{Title}[Counter_recountWhen]
+		%% Package option [framed] required
+		%% PACKAGE {framed} required
+		%% Usage the same as \newtheorem, but with frame.
+	% \newtheorem{TheoremName}[Counter_countWith]{Title}[Counter_recountWhen]
+
+%% theorem environment
+{
+\theorembodyfont{\normalfont}
+\theoremseparator{\quad}
+
+\newtheorem{defn}{定义}[section]
+\newtheorem{exap}[defn]{例}
+\newtheorem{propo}[defn]{命题}
+\newtheorem{theorem}[defn]{定理}
+\newtheorem{lemma}[defn]{引理}
+\newtheorem{corol}[defn]{推论}
+}
+{
+\theoremstyle{nonumberplain}
+\theorembodyfont{\normalfont}
+\theoremseparator{\quad}
+\theoremsymbol{$\Box$}
+
+\newtheorem{proof}{证明}
+}
+{
+\theoremstyle{nonumberplain}
+\theorembodyfont{\normalfont}
+\theoremseparator{\quad}
+\theoremsymbol{}
+
+\newtheorem{prf}{证明}
+\newtheorem{sol}{解}
+\newtheorem{remk}{注}
+}

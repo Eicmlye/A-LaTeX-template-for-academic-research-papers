@@ -1,0 +1,33 @@
+% version 2023.0528.0943
+
+% Customize contents display.
+\usepackage{titletoc} % Customize contents labels. 
+
+\renewcommand{\contentsname}{目\qquad 录}
+	%> For changing LaTeX 'Fixed names', see https://texfaq.org/FAQ-fixnam.
+	%> For customized contentsline, see https://tex.stackexchange.com/questions/628934/how-to-format-contentslabel-in-titletoc.
+
+\contentsmargin{0pt} % The right margin of contents lines.
+
+\titlecontents{section}[0pt]{\vspace*{1em}\bf\songti} % above code
+	{第\thecontentslabel 章\hspace{1.5em}} % numbered chapter
+	{} % numberless chapter
+	{\titlerule*[0.75em]{$\cdot$}\quad\textbf{\thecontentspage}}
+	
+\titlecontents{subsection}[0pt]{\songti} % above code
+	{\hspace{1.5em}\thecontentslabel\hspace{1.5em}} % numbered chapter
+	{} % numberless chapter
+	{\titlerule*[0.75em]{$\cdot$}\quad\thecontentspage}
+	
+% Customize the titles displayed in document environment.
+\usepackage{titlesec} % Customize chapter labels.
+	%# \titleformat{chapter}[shape]{format}{label}{sep}{before}[after]
+
+\renewcommand{\thesection}{\arabic{section}}
+\renewcommand{\thesubsection}{\thesection.\arabic{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+\titleformat{\section}{\zihao{3}\bfseries\heiti\centering}{第\thesection 章}{1em}{}
+\titleformat{\subsection}{\zihao{-3}\bfseries\heiti}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\zihao{4}\bfseries\heiti}{\thesubsubsection}{1em}{}
+	%> See usage at https://www.ctan.org/pkg/titlesec.

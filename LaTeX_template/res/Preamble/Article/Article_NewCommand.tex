@@ -1,0 +1,24 @@
+\makeatletter
+	\def\clearintentionalblank{
+		\clearpage
+		\if@twoside
+			\ifodd
+				\c@page
+			\else
+				\hbox{}
+				\vfill
+				\begin{center}
+					This page intentionally left blank.
+				\end{center}
+				\vfill
+				\thispagestyle{empty}
+				\newpage
+				\if@twocolumn
+					\hbox{}
+					\newpage
+				\fi
+			\fi
+		\fi
+		}
+\makeatother
+	%> See https://tex.stackexchange.com/questions/269611/ or http://www.hijtr.com/latex-book-this-page-is-intetionally-left-blank/.

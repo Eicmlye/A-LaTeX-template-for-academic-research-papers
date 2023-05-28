@@ -1,0 +1,51 @@
+% Some command in titlepage: 
+	%% env{flushleft},env{flushright}: left or right alignment. 
+	%% \testsc{}: All letters are capitalized, while the first letter is larger. 
+	%% \vfill: Add vertical space to fill out the page. 
+	%# \Huge,\huge,\LARGE,\Large,\large,\small,\footnotesize,\tiny.
+	
+	%% 2 * '\ ' == 1 * digit
+	%% 4 * '\ ' == 1 * CHN_char == 1 * \quad
+	%% 1 * \quad == 1 * length of 'M'
+	%% 2 * \quad == 1 * \qquad
+	%% For length units conversion, see https://chenfuture.wordpress.com/2008/03/22/math-spacing-and-length-units/.
+
+\begin{titlepage}
+	\begin{center}
+	\vspace*{-3em}\hrulefill
+	% upper part of the page
+	\\	\vspace*{3em}
+	{\zihao{1}\includegraphics[width=0.5\linewidth]{protected/logo_BNU.png}}
+	\\[1em]
+	{\zihao{-0}\textbf{\songti 本\ 科\ 生\ 毕\ 业\ 论\ 文（设\ 计）}}
+	\\[6em]
+	\zihao{3}\textbf{\heiti 毕业论文（设计）题目:\quad\ \ \qquad\qquad\qquad\qquad\qquad\qquad\qquad\qquad}
+	\\[0.5em]
+	\textbf{\songti\underline{\makebox[28em][c]{\titlethesisCHNi}}}
+	\\[0.5em]
+	\textbf{\songti\underline{\makebox[28em][c]{\titlethesisCHNii}}}
+	\\[4.5em]
+	\end{center}
+	\zihao{4}
+	\textbf{\songti \makebox[59pt][l]{}部\quad\ 院\quad\ 系：\quad}
+	\\[0.7em]
+	\textbf{\songti \makebox[59pt][l]{}专\qquad\quad\ \ 业：\quad}
+	\\[0.7em]
+	\textbf{\songti \makebox[59pt][l]{}学\qquad\quad\ \ 号：\quad}
+	\\[0.7em]
+	\textbf{\songti \makebox[59pt][l]{}学\ \ 生\ \ 姓\ \ 名：\quad}
+	\\[0.7em]
+	\textbf{\songti \makebox[59pt][l]{}指\ \ 导\ \ 老\ \ 师：\quad}
+	\\[0.7em]
+	\textbf{\songti \makebox[59pt][l]{}指导教师职称：\quad}
+	\\[0.7em]
+	\textbf{\songti \makebox[59pt][l]{}指导教师单位：\quad}
+	\\[3em]
+	\begin{center}
+	\textbf{\zihao{-4}\qquad\qquad\qquad 2023年\quad 月\quad 日}
+
+	\vfill
+	
+	% bottom of the page
+	\end{center}
+\end{titlepage}

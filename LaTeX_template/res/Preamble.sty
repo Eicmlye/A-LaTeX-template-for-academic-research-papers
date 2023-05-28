@@ -1,0 +1,32 @@
+\ProvidesPackage{res/Preamble}[2023-05-28 v.1.0 A LaTeX template for academic research papers.]
+	%% \ProvidesPackage{<packageName>}[<date> <packageInfo>]
+	%% <comment> must begin with date formatted string.
+	
+	%> See https://tex.stackexchange.com/questions/150153.
+
+\input{res/Preamble/WarningSolver/LaTeXFontWarningSolver.tex}
+
+\input{res/Preamble/Article/ArticleSettings.tex}
+\input{res/Preamble/Article/TableSettings.tex}
+\input{res/Preamble/Article/Graphics.tex}
+
+\input{res/Preamble/Article/PageSettings.tex}
+\input{res/Preamble/Article/Fonts.tex}
+
+\input{res/Preamble/Math/Math_Fonts.tex}
+\input{res/Preamble/Math/Math_Symbols.tex}
+\input{res/Preamble/Math/Math_EnvironmentSettings.tex}
+
+\input{res/Preamble/CHNSettings/C_ChineseFonts.tex}
+\input{res/Preamble/CHNSettings/C_Math_TheoremEnvironment.tex}
+
+\input{res/Preamble/Article/ContentsSettings.tex}
+	%% This file may use \zihao in {ctex} imported in Pre_ChineseFonts.tex.
+
+\input{res/Preamble/Math/Math_NewCommand.tex}
+\input{res/Preamble/Article/Text_NewCommand.tex}
+
+\input{res/Preamble/Article/PagestyleDef.tex}
+\input{res/Preamble/Article/CodestyleDef.tex}
+
+\input{res/Preamble/Article/Article_NewCommand.tex}

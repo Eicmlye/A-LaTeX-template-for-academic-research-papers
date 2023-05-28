@@ -1,0 +1,104 @@
+% version 2023.0528.0943
+
+\documentclass[a4paper, twoside, 12pt]{article}
+	%# oneside, twoside
+	%# openany, openright (\documentclass{book} only)
+
+\usepackage{res/Preamble}
+
+% Enter the title here.
+\newcommand{\titlethesisCHN}{论文题目}
+\newcommand{\titlethesisENG}{TitleThesis}
+
+\newcommand{\titlethesisCHNi}{\titlethesisCHN}
+\newcommand{\titlethesisCHNii}{}
+	
+% The header of this paper.
+%\title{\titlethesisCHN} % The title of this paper.
+%\author{} % The names of the authors.
+%\date{\today} % The compile date of the pdf file. 
+	%% \date{\today} prints the current date. 
+	%% \date{} displays no date. 
+	%% Commenting this line is the same as \date{\today}.
+
+\begin{document}
+
+\include{pgs/TitlePage.tex}
+	%% \include inserts the file to a new page, while \input does not.
+
+% Main body page style default setting: 
+	%% The main body has NO pagestyle by default except centered foot pagenumber. 
+\pagestyle{prepages}
+\include{pgs/Confidential.tex}
+
+\pagestyle{artimain}
+\pagenumbering{arabic}
+\raggedbottom
+	%% \raggedbottom makes all pages the height of the text on that page. 
+	%% w/o this declaration, LaTeX will try to stretch vertical spaces
+	%% between paragraphs to fill out the page.
+	
+	%> For unappropriate vertical space stretching, see https://latexref.xyz/Layout.html#Layout. 
+	%# \flushbottom
+	%# \raggedbottom
+
+\include{pgs/CH_abstract.tex}
+\include{pgs/EN_abstract.tex}
+\include{pgs/contents.tex} % Page number restarts from 1 in contents.
+\clearintentionalblank % EM defined in preamble.
+
+\setcounter{page}{1}
+\input{pgs/preface.tex}
+
+% -------- Enter here --------
+	%% Copy&Paste res/newChpt.tex to add new chapters.
+	
+\input{pgs/chpt1.tex}
+
+% -------- End --------
+
+\include{pgs/ref.tex}
+
+\include{pgs/attachment.tex}
+
+\include{pgs/Acknowledgement.tex}
+\end{document}
+
+
+
+\begin{comment}
+
+% Image insertation. 
+	\begin{figure}[!htb]
+	\centering
+		\begin{subfigure}{0.5\textwidth}
+		\centering
+		\includegraphics[width=\linewidth, angle=0]{}
+		\caption{}
+		\label{}
+		\end{subfigure}
+	\caption{}
+	\label{}
+	\end{figure}
+	
+% Table insertation.
+	\begin{table}[!htb]
+	\caption{}
+	\label{}
+	\centering
+		\begin{tabular}{c|c|c}
+		&&
+		\\
+		\hline
+		~&~&~
+		\\[-1.5em]
+		&&
+		\\
+		\hline
+		~&~&~
+		\\[-1.5em]
+		&&
+		\end{tabular}
+	\end{table}
+	
+\end{comment}

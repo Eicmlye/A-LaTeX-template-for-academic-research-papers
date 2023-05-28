@@ -1,0 +1,77 @@
+% version 2023.0528.0943
+
+\usepackage{ctex}
+	%% Do NOT import this package if a full-English article is required. 
+	
+	%# \zihao{}
+	
+	%% {ctex} fonts
+		%#	\songti 宋体
+		%#	\kaishu 楷体
+		%#	\heiti 黑体
+		%#	\yahei 微软雅黑
+		%#	\fangsong 仿宋
+		%#	\youyuan 幼圆
+		%#	\lishu 隶书
+	
+\usepackage{xeCJK}
+	\setmainfont{Times New Roman}
+		%% \textrm{} for locally use main font.
+		%% \rmfamily for globally use main font.
+	\setsansfont{Verdana}
+		%% \textsf{} for locally use sans serif.
+		%% \sffamily for globally use sans serif.
+	\setmonofont{Courier New}
+		%% \texttt{} for locally use mono font.
+		%% \ttfamily for globally use mono font.
+	\setCJKfamilyfont{zhsong}[AutoFakeBold={2.17}]{SimSun}
+	\renewcommand*{\songti}{\CJKfamily{zhsong}}
+	\setCJKfamilyfont{zhhei}[AutoFakeBold={2.17}]{SimHei}
+	\renewcommand*{\heiti}{\CJKfamily{zhhei}}
+	
+	%> See detailed font size, shape modifiers at https://blog.csdn.net/dreaming_coder/article/details/115723681.
+	
+	%#	{\CJKfontspec{Adobe Song Std L}} % Adobe 宋体
+	%#	{\CJKfontspec{Adobe Kaiti Std R}} % Adobe 楷体
+	%#	{\CJKfontspec{Adobe Heiti Std R}} % Adobe 黑体
+	%#	{\CJKfontspec{Adobe Fangsong Std R}} % Adobe 仿宋
+	%#	
+	%#	{\CJKfontspec{STSong}} % 华文宋体
+	%#	{\CJKfontspec{STZhongsong}} % 华文中宋
+	%#	{\CJKfontspec{STKaiti}} % 华文楷体
+	%#	{\CJKfontspec{STXingkai}} % 华文行楷
+	%#	{\CJKfontspec{STXihei}} % 华文细黑
+	%#	{\CJKfontspec{STFangsong}} % 华文仿宋
+	%#	{\CJKfontspec{STLiti}} % 华文隶书
+	%#	{\CJKfontspec{STCaiyun}} % 华文彩云
+	%#	{\CJKfontspec{STHupo}} % 华文琥珀
+	%#	
+	%#	{\CJKfontspec{FZShuSong-Z01S}} % 方正书宋
+	%#	{\CJKfontspec{FZHei-B01S}} % 方正黑体
+	%#	{\CJKfontspec{FZKai-Z03S}} % 方正楷体
+
+\usepackage{zhnumber}
+	%% Add \zhnum as an option for counter labels. 
+
+%\usepackage{type1cm} % Customized font size. EM deprecated.
+	%# {\fontsize{fontsize}{baselineskip}\selectfont}
+
+
+
+% 字号转换(pt)
+	%%	初号42
+	%%	小初36
+	%%	一号26
+	%%	小一24
+	%%	二号22
+	%%	小二18
+	%%	三号16
+	%%	小三15
+	%%	四号14
+	%%	小四12
+	%%	五号10.5
+	%%	小五9
+	%%	六号7.5
+	%%	小六6.5
+	%%	七号5.5
+	%%	小七5

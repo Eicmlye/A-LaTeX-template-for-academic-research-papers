@@ -1,0 +1,45 @@
+% version 2023.0528.0943
+
+% Mainbody.
+\fancypagestyle{prepages}{
+	\fancyhf{} % clear all header and footer fields
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0pt}
+	}
+\fancypagestyle{artimain}{
+	\fancyhf{} % clear all header and footer fields
+	\fancyfoot[C]{ 	\hrulefill
+					\raisebox{-2.7pt}{\quad\thepage\quad}
+					\hrulefill
+					}
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0pt}
+	}
+\fancypagestyle{contents}{
+	\fancyhf{} % clear all header and footer fields
+	%\fancyhead[L]{}
+	\fancyhead[RO, LE]{目录}
+	\fancyfoot[RO, LE]{ 	\hrulefill
+				\raisebox{-2.7pt}{\quad\bf{\thepage}\quad}
+				\hrulefill
+				}
+	\renewcommand{\headrulewidth}{0.4pt}
+	\renewcommand{\footrulewidth}{0pt}
+	}
+\fancypagestyle{hw}{
+	\fancyhf{}
+	\fancyhead[R]{NAME\quad IDNUM}
+	\fancyfoot[C]{ 	\hrulefill
+					\raisebox{-2.7pt}{\quad\thepage\textbackslash\pageref{LastPage}\quad}
+					\hrulefill
+					}
+	\renewcommand{\headrulewidth}{0.5pt}
+	\renewcommand{\footrulewidth}{0pt}
+	}
+	
+% Redefine pagestyle `plain'.
+\fancypagestyle{plain}{
+	\fancyhf{} % clear all header and footer fields
+	\renewcommand{\headrulewidth}{0pt}
+	\renewcommand{\footrulewidth}{0pt}
+	}

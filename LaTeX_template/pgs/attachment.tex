@@ -1,0 +1,42 @@
+\phantomsection
+\section*{附\quad 录}
+\addcontentsline{toc}{section}{附录}
+
+\renewcommand{\lstlistlistingname}{清单目录}
+\renewcommand{\lstlistingname}{清单}
+
+\lstlistoflistings
+
+% -------- Enter here --------
+
+% -------- End --------
+
+\begin{comment}
+
+% \lstinline syntax:
+	%# \lstinline[⟨key=value list⟩]⟨character⟩⟨source code⟩⟨same character⟩
+This is an inline listing \lstinline[language=C++]!\#include<iostream>!. 
+
+\begin{lstlisting}[
+	language=C++, 
+	%name={}, % If firstnumber=auto, listings with the same name share a line counter.
+	%title={}, % caption without 'Listing xx: '
+	caption={},
+	%label={},
+	nolol=false % If true, this listing will not be included in the list of listings.
+	]
+	[Enter code here.]
+\end{lstlisting}
+
+% \lstinputlisting syntax:
+	%# \lstinputlisting[⟨key=value list⟩]{⟨file name⟩}
+
+\lstinputlisting[
+	language=C++, 
+	%title={}, % caption without 'Listing xx: '
+	caption={\lstname},
+	%label={},
+	nolol=false % If true, this listing will not be included in the list of listings.
+	]{}
+
+\end{comment}

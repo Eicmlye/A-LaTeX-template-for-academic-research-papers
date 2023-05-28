@@ -1,0 +1,42 @@
+% version 2023.0528.0943
+
+\usepackage{listings} % Highlighted code imported from other files.
+	%> See usage at https://ctan.org/pkg/listings. 
+
+%> See detailed settings at https://ctan.org/pkg/listings.
+\lstset{
+	%% The path of attachments.
+		inputpath={./attachment/},
+	%% Print range.
+		showlines=false,
+	%% Listing appearance.
+		%% fonts
+			basicstyle=\small\ttfamily, % Style settings for the whole listing.
+			commentstyle=\ttfamily\slshape\color{LimeGreen},
+			stringstyle=\ttfamily\color{DarkOrange},
+		%% color
+			backgroundcolor=\color{white},
+		%% frame
+			frame=none, %# single, trblTRBL
+			framerule=0pt,
+	%% Line number.
+		numbers=left, % Position of line numbers.
+		numberstyle=\rmfamily\color{gray}, % Style of line numbers.
+		stepnumber=1, % Line numbers display every (stepnumber) lines.
+		numbersep=10pt, % The distance between line numbers and the listing.
+		numberblanklines=true, % Whether the blank lines will be numbered.
+		firstnumber=auto, % The first line to be numbered.
+	%% Tab and spaces.
+		%showspaces=false,
+		%showstringspaces=false,
+		%showtabs=false,
+		%tab=$\to$, % This token will replace tabs if showtabs=true.
+		tabsize=2,
+	%% Captions.
+		captionpos=t, %# t, b
+	%% Line breaks.
+		breaklines=true, % Whether to allow auto line breaking.
+		breakatwhitespace=true, % If true, line breaks are allowed only at ws.
+	%% Lstlistoflisting.
+		nolol=false % If true, this listing will not be included in the list of listings.
+	}

@@ -1,0 +1,27 @@
+% version 2023.0528.0943
+
+\usepackage{multicol} % Allow multi-column layout.
+
+\usepackage{hyperref} % Hyperlinks and cross-references.
+	\hypersetup{
+		%hidelinks, % links will neither be colored nor color-framed.
+		colorlinks=true, % If hidelinks is not set, when colorlinks=true the characters of links will be colored, otherwise they will be color-framed.
+		linkcolor=black, % Color of cross-references.
+		citecolor=black, % Color of bibliography citation.
+		urlcolor=blue % Color of URL links.
+		}
+	%> See https://ctan.org/pkg/hyperref.
+	%# \href{URL}{text}
+	%# \hypertarget{label}{text}
+	%# \hyperlink{label}{text}
+	%# \hyperdef{category}{label}{text}
+	%# \phantomsection
+
+\usepackage{verbatim} % Multi-line comment and verbatim for inline code sections.
+	%# \begin{comment}...\end{comment}
+	%# \begin{verbatim}...\end{verbatim}
+
+\usepackage{enumitem} % Global {enumerate} formatting.
+	\setlist[enumerate,1]{label=\arabic*.\ } % 1st level label 1. 
+	\setlist[enumerate,2]{label=(\arabic*)\ } % 2nd level label (1) 
+	\setlist[enumerate,3]{label=(\roman*)\ } % 3rd level label (i) 
