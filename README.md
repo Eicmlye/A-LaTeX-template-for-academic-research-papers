@@ -12,10 +12,13 @@ This repository is a $\LaTeX$ template for academic research papers. It contains
 ## Table of Contents
 
 - [Install](#install)
-- [Usage](#usage)
+- [Basic Usages](#basic-usages)
   - [Directory Structure](#directory-structure)
   - [How to get the PDF file?](#how-to-get-the-pdf-file)
   - [Customize your information](#customize-your-information)
+  - [How to edit the document?](#how-to-edit-the-document)
+  - [Image Insertation](#image-insertation)
+  - [Source Code Insertation](#source-code-insertation)
 - [Maintainer](#maintainer)
 - [License](#license)
 
@@ -23,7 +26,7 @@ This repository is a $\LaTeX$ template for academic research papers. It contains
 
 This repository uses $\LaTeX$ and requires only the standard packages. To install $\LaTeX$, check out the installation process at [$\LaTeX$ project](https://www.latex-project.org/).
 
-## Usage
+## Basic Usages
 
 ### Directory Structure
 
@@ -127,14 +130,14 @@ Compile `paper.tex` in `XeLaTeX` mode in TeXworks editor, [paper.pdf](LaTeX_temp
 
 ### Customize your information
 
-1. To change **the logo of university**, 
+1. To modify **the logo of university**, 
     - Put the logo image file in `pics/protected/`. 
     - Go to pgs/[TitlePage.tex](LaTeX_template/pgs/TitlePage.tex). At line 13, 
     ```latex
     {\zihao{1}\includegraphics[width=0.5\linewidth]{protected/logo_BNU.png}}
     ```
     change `protected/logo_BNU.png` to the filename of the logo you just added. 
-2. To change **the title of your paper**, go to [paper.tex](LaTeX_template/paper.tex). At line 9-14,
+2. To modify **the title of paper**, go to [paper.tex](LaTeX_template/paper.tex). At line 9-14,
     ```latex
     % Enter the title here.
     \newcommand{\titlethesisCHN}{论文题目}
@@ -145,7 +148,7 @@ Compile `paper.tex` in `XeLaTeX` mode in TeXworks editor, [paper.pdf](LaTeX_temp
     ```
     change `论文题目` and `TitleThesis` to your title in CHN and ENG, respectively.
     Notice that `\titlethesisCHNi` and `\titlethesisCHNii` will be used in pgs/[TitlePage.tex](LaTeX_template/pgs/TitlePage.tex). If your title is longer than **28** characters, you should separate it into two lines.
-3. To change **your personal info on the titlepage**, go to pgs/[TitlePage.tex](LaTeX_template/pgs/TitlePage.tex). At line 30-45,
+3. To modify **personal info on the titlepage**, go to pgs/[TitlePage.tex](LaTeX_template/pgs/TitlePage.tex). At line 30-45,
     ```latex
     \textbf{\songti \makebox[59pt][l]{}部\quad\ 院\quad\ 系：\quad}
     \\[0.7em]
@@ -165,6 +168,30 @@ Compile `paper.tex` in `XeLaTeX` mode in TeXworks editor, [paper.pdf](LaTeX_temp
     \textbf{\zihao{-4}\qquad\qquad\qquad 2023年\quad 月\quad 日}
     ```
     change the corresponding info to yours.
+
+### How to edit the document?
+
+All the document files are in `pgs/` directory. You can add new chapter/section by the following steps:
+1. Copy and paste the file pgs/protected/[newChpt.tex](LaTeX_template/pgs/protected/newChpt.tex) to `pgs/` directory.
+2. Rename the copy to, e.g. , `chpt2.tex`.
+3. Insert the file to [paper.tex](LaTeX_template/paper.tex) in the document section.
+    ```latex
+    % -------- Enter here --------
+        %% Copy&Paste pgs/protected/newChpt.tex to add new chapters.
+        
+    \input{pgs/chpt1.tex}
+    \input{pgs/chpt2.tex} % This line is inserted.
+
+    % -------- End --------
+    ```
+
+### Image Insertation
+
+All the images should be placed in `pics/` directory. 
+
+### Source Code Insertation
+
+All the source code files to be attached in the paper should be placed in `attachment/` directory.
 
 ## Maintainer
 
