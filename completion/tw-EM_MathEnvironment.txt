@@ -1,0 +1,18 @@
+% !TEX encoding = UTF-8 Unicode
+	%% This is a command line instruction for TeXworks,
+	%% telling TeXworks to encode the file in UTF-8 format.
+	%% This file should be put in 
+  %% C:/User/USERNAME/.texlive20xx/texmf-config/texworks/completion/
+  %% and is regarded as a auto-completion formatting file.
+	%% See section 4.6 at https://github.com/TeXworks/manual/releases.
+
+bdef:=\begin{Definition}[#INS#]#RET#•#RET#\end{Definition}•
+bexamp:=\begin{Example}[#INS#]#RET#•#RET#\end{Example}•
+bpropo:=\begin{Proposition}[#INS#]#RET#•#RET#\end{Proposition}•
+btheo:=\begin{Theorem}[#INS#]#RET#•#RET#\end{Theorem}•
+blemma:=\begin{Lemma}[#INS#]#RET#•#RET#\end{Lemma}•
+bcorol:=\begin{Corollary}[#INS#]#RET#•#RET#\end{Corollary}•
+bproof:=\begin{Proof}[#INS#]#RET#•#RET#\end{Proof}•
+bprf:=\begin{Prf}[#INS#]#RET#•#RET#\end{Prf}•
+bsol:=\begin{Solution}[#INS#]#RET#•#RET#\end{Solution}•
+bremark:=\begin{Remark}[#INS#]#RET#•#RET#\end{Remark}•

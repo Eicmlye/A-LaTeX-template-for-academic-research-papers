@@ -3,7 +3,7 @@
 % Must be used in math mode, otherwise the delimiters won't work.
 
 % Text.
-	\newcommand{\bs}{\backslash}
+	%\newcommand{\bs}{\backslash} % EM defined auto-completion.
 	\newcommand{\prm}{^{\prime}}
 	\newcommand{\pprm}{^{\prime\prime}}
 	\newcommand{\nprm}[1]{^{(#1)}}
@@ -23,27 +23,27 @@
 
 % Brackets with delimiters.
 	%% parentheses
-	\newcommand{\mpa}[1]{\left(#1\right)} % Math Parenthesis
-		\newcommand{\bpa}[1]{\big(#1\big)}
-		\newcommand{\Bpa}[1]{\Big(#1\Big)}
-		\newcommand{\bgpa}[1]{\bigg(#1\bigg)}
-		\newcommand{\Bgpa}[1]{\Bigg(#1\Bigg)}
+	\newcommand{\mparen}[1]{\left(#1\right)} % Math Parenthesis.
+		\newcommand{\bparen}[1]{\big(#1\big)}
+		\newcommand{\Bparen}[1]{\Big(#1\Big)}
+		\newcommand{\bgparen}[1]{\bigg(#1\bigg)}
+		\newcommand{\Bgparen}[1]{\Bigg(#1\Bigg)}
 	
 	%% brackets
-	\newcommand{\mbr}[1]{\left[#1\right]} % Math Brackets.
-		\newcommand{\bbr}[1]{\big[#1\big]}
-		\newcommand{\Bbr}[1]{\Big[#1\Big]}
-		\newcommand{\bgbr}[1]{\bigg[#1\bigg]}
-		\newcommand{\Bgbr}[1]{\Bigg[#1\Bigg]}
-	\newcommand{\lbr}[1]{\left[#1\right)}
-	\newcommand{\rbr}[1]{\left(#1\right]}
+	\newcommand{\mbracket}[1]{\left[#1\right]} % Math Brackets.
+		\newcommand{\bbracket}[1]{\big[#1\big]}
+		\newcommand{\Bbracket}[1]{\Big[#1\Big]}
+		\newcommand{\bgbracket}[1]{\bigg[#1\bigg]}
+		\newcommand{\Bgbrackt}[1]{\Bigg[#1\Bigg]}
+	\newcommand{\lbracket}[1]{\left[#1\right)}
+	\newcommand{\rbracket}[1]{\left(#1\right]}
 	
 	%% braces
-	\newcommand{\mfw}[1]{\left\{#1\right\}} % Math Braces.
-		\newcommand{\bfw}[1]{\big\{#1\big\}}
-		\newcommand{\Bfw}[1]{\Big\{#1\Big\}}
-		\newcommand{\bgfw}[1]{\bigg\{#1\bigg\}}
-		\newcommand{\Bgfw}[1]{\Bigg\{#1\Bigg\}}
+	\newcommand{\mbrace}[1]{\left\{#1\right\}} % Math Braces.
+		\newcommand{\bbrace}[1]{\big\{#1\big\}}
+		\newcommand{\Bbrace}[1]{\Big\{#1\Big\}}
+		\newcommand{\bgbrace}[1]{\bigg\{#1\bigg\}}
+		\newcommand{\Bgbrace}[1]{\Bigg\{#1\Bigg\}}
 
 	%% special bracket
 	\newcommand{\mset}[2]{\mfw{\left.#1\middle|#2\right.}} % Math Set.
@@ -72,10 +72,10 @@
 	\newcommand{\dlim}[1]{\dpl\lim_{#1}}
 	\newcommand{\dlimsup}[1]{\dpl\limsup_{#1}}
 	\newcommand{\dliminf}[1]{\dpl\liminf_{#1}}
-	\DeclareMathOperator*{\limsOPR}{\overline{\lim}}
+	\DeclareMathOperator*{\limsOPR}{\overline{\lim}} % aux
 	\newcommand{\lims}[1]{\limsOPR_{#1}}
 	\newcommand{\dlims}[1]{\dpl\limsOPR_{#1}}
-	\DeclareMathOperator*{\limiOPR}{\underline{\lim}}
+	\DeclareMathOperator*{\limiOPR}{\underline{\lim}} % aux
 	\newcommand{\limi}[1]{\limiOPR_{#1}}
 	\newcommand{\dlimi}[1]{\dpl\limiOPR_{#1}}
 	
@@ -113,10 +113,10 @@
 	\newcommand{\diff}{\mathrm{d}} % Differential.
 	\newcommand{\deri}[2]{\dfrac{\diff{#1}}{\diff{#2}}} % Derivative.
 	\newcommand{\pder}[2]{\dfrac{\partial#1}{\partial#2}} % Partial derivative.
-	\DeclareMathOperator*{\argmaxOPR}{argmax}
+	\DeclareMathOperator*{\argmaxOPR}{argmax} % aux
 	\newcommand{\argmax}[1]{\argmaxOPR_{#1}}
 	\newcommand{\dargmax}[1]{\dpl\argmaxOPR_{#1}}
-	\DeclareMathOperator*{\argminOPR}{argmin}
+	\DeclareMathOperator*{\argminOPR}{argmin} % aux
 	\newcommand{\argmin}[1]{\argminOPR_{#1}}
 	\newcommand{\dargmin}[1]{\dpl\argminOPR_{#1}}
 	
@@ -138,9 +138,9 @@
 	\newcommand{\adj}{^{\ast}} % Adjoint or conjugate transpose.
 	
 	%% rings
-	\DeclareMathOperator*{\gcdOPR}{gcd}
+	\DeclareMathOperator*{\gcdOPR}{gcd} % aux
 	\renewcommand{\gcd}[1]{\gcdOPR\mpa{#1}}
-	\DeclareMathOperator*{\lcmOPR}{lcm}
+	\DeclareMathOperator*{\lcmOPR}{lcm} % aux
 	\newcommand{\lcm}[1]{\lcmOPR\mpa{#1}}
 	\newcommand{\divi}[2]{\left.#1\ \middle|\ #2\right.} % Divisible.
 	
@@ -149,7 +149,7 @@
 	
 % Geometry.
 	% \renewcommand{\parallel}{\,/\hspace{-0.2em}/\,} % EM deprecated.
-	\DeclareMathOperator{\parallelOPR}{//}
+	\DeclareMathOperator{\parallelOPR}{//} % aux
 	\renewcommand{\parallel}{\parallelOPR}
 	\newcommand{\vct}[1]{\overrightarrow{#1}}
 	\newcommand{\x}{u^1}
@@ -166,8 +166,8 @@
 		\newcommand{\Bprb}[1]{\mathbb{P}\Bpa{#1}}
 		\newcommand{\bgprb}[1]{\mathbb{P}\bgpa{#1}}
 		\newcommand{\Bgprb}[1]{\mathbb{P}\Bgpa{#1}}
-	\DeclareMathOperator{\mep}{\mathbb{E}} % Math expectation.
-	\newcommand{\mch}{\mathds{1}} % Math characterization function.
+	\DeclareMathOperator{\mep}{\mathbb{E}} % Mathematical expectation.
+	\newcommand{\mch}{\mathds{1}} % Characterization function.
 	\DeclareMathOperator{\var}{var} % Variance.
 	\DeclareMathOperator{\cov}{cov} % Covariance.
 	\newcommand{\aseq}{\xlongequal{\text{a. s. }}} % Almost surely equal to.
