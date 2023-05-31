@@ -63,7 +63,7 @@ LaTeX_template
 |       |
 |       |-------Acknowledgement.tex
 |
-|-------pics
+|-------img
 |       |
 |       |-------protected
 |               |
@@ -131,7 +131,7 @@ Compile `paper.tex` in `XeLaTeX` mode in TeXworks editor, [paper.pdf](LaTeX_temp
 ### Customize your information
 
 1. To modify **the logo of university**, 
-    - Put the logo image file in `pics/protected/`. 
+    - Put the logo image file in `img/protected/`. 
     - Go to pgs/[TitlePage.tex](LaTeX_template/pgs/TitlePage.tex). At line 13, 
     ```latex
     {\zihao{1}\includegraphics[width=0.5\linewidth]{protected/logo_BNU.png}}
@@ -187,7 +187,7 @@ All the document files are in `pgs/` directory. You can add new chapter/section 
 
 ### Image Insertation
 
-All the images should be placed in `pics/` directory. 
+All the images should be placed in `img/` directory. 
 
 ### Source Code Insertation
 
