@@ -12,6 +12,8 @@ This repository is a $\LaTeX$ template for academic research papers. It contains
 ## Table of Contents
 
 - [Install](#install)
+- [Settings](#settings)
+    - [$\TeX\text{works}$ Customized Auto-completion](#customized-auto-completion)
 - [Basic Usages](#basic-usages)
   - [Directory Structure](#directory-structure)
   - [How to get the PDF file?](#how-to-get-the-pdf-file)
@@ -25,6 +27,16 @@ This repository is a $\LaTeX$ template for academic research papers. It contains
 ## Install
 
 This repository uses $\LaTeX$ and requires only the standard packages. To install $\LaTeX$, check out the installation process at [$\LaTeX$ project](https://www.latex-project.org/).
+
+## Settings
+
+### Customized Auto-completion
+
+**This section is available only for $\TeX\text{works}$ editor.**
+
+The directory `completion` includes some `.txt` files to deal with the new commands and math environments. You can put these files in `C:/User/USERNAME/.texlive20xx/texmf-config/texworks/completion/` directory, restart $\TeX\text{works}$ editor, and the auto-completion will recognize these new settings.
+
+Learn more details about $\TeX\text{works}$ auto-completion [here in section 4.6](https://github.com/TeXworks/manual/releases).
 
 ## Basic Usages
 
