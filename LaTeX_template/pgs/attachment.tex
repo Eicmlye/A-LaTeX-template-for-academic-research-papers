@@ -8,13 +8,35 @@
 \phantomsection
 \section*{附\quad 录}
 \addcontentsline{toc}{section}{附录}
+\appendix
 
 \renewcommand{\lstlistlistingname}{清单目录}
 \renewcommand{\lstlistingname}{清单}
 
+\titlecontents{section}[0pt]{\vspace*{1em}\bf\songti} % above code
+	{\thecontentslabel\hspace{1.5em}} % numbered chapter
+	{} % numberless chapter
+	{\titlerule*[0.75em]{$\cdot$}\quad\textbf{\thecontentspage}}
+	
+\titlecontents{subsection}[0pt]{\songti} % above code
+	{\hspace{1.5em}\thecontentslabel\hspace{1.5em}} % numbered chapter
+	{} % numberless chapter
+	{\titlerule*[0.75em]{$\cdot$}\quad\thecontentspage}
+	
+%\renewcommand{\thesection}{\arabic{section}} % \appendix renew this command to \Alph{section}.
+\renewcommand{\thesubsection}{\Alph{subsection}}
+\renewcommand{\thesubsubsection}{\thesubsection.\arabic{subsubsection}}
+
+%\titleformat{\section}{\zihao{3}\bfseries\heiti\centering}{\thesection}{1em}{}
+\titleformat{\subsection}{\zihao{-3}\bfseries\heiti}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}{\zihao{4}\bfseries\heiti}{\thesubsubsection}{1em}{}
+
 \lstlistoflistings
 
 % -------- Enter here --------
+	\subsection{}
+	
+		\subsubsection{}
 
 % -------- End --------
 
@@ -22,7 +44,7 @@
 
 % \lstinline syntax:
 	%# \lstinline[⟨key=value list⟩]⟨character⟩⟨source code⟩⟨same character⟩
-This is an inline listing \lstinline[language=C++]!\#include<iostream>!. 
+This is an inline listing \lstinline[language=C++]!#include<iostream>!. 
 
 \begin{lstlisting}[
 	language=C++, 
