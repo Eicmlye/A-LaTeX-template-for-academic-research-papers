@@ -46,11 +46,11 @@
 		\newcommand{\Bgbrace}[1]{\Bigg\{#1\Bigg\}}
 
 	%% special bracket
-	\newcommand{\mset}[2]{\mfw{\left.#1\middle|#2\right.}} % Math Set.
-		\newcommand{\bset}[2]{\bfw{#1\big|#2}}
-		\newcommand{\Bset}[2]{\Bfw{#1\Big|#2}}
-		\newcommand{\bgset}[2]{\bgfw{#1\big|#2}}
-		\newcommand{\Bgset}[2]{\Bgfw{#1\Big|#2}}
+	\newcommand{\mset}[2]{\mbrace{\left.#1\middle|#2\right.}} % Math Set.
+		\newcommand{\bset}[2]{\bbrace{#1\big|#2}}
+		\newcommand{\Bset}[2]{\Bbrace{#1\Big|#2}}
+		\newcommand{\bgset}[2]{\bgbrace{#1\big|#2}}
+		\newcommand{\Bgset}[2]{\Bgbrace{#1\Big|#2}}
 	\newcommand{\mar}[1]{\left\langle#1\right\rangle} % Math Arrow.
 		\newcommand{\bmar}[1]{\big\langle#1\big\rangle}
 	\newcommand{\floor}[1]{\left\lfloor#1\right\rfloor}
@@ -162,10 +162,10 @@
 	
 % Probability.
 	\newcommand{\prb}[1]{\mathbb{P}\mpa{#1}}
-		\newcommand{\bprb}[1]{\mathbb{P}\bpa{#1}}
-		\newcommand{\Bprb}[1]{\mathbb{P}\Bpa{#1}}
-		\newcommand{\bgprb}[1]{\mathbb{P}\bgpa{#1}}
-		\newcommand{\Bgprb}[1]{\mathbb{P}\Bgpa{#1}}
+		\newcommand{\bprb}[1]{\mathbb{P}\bparen{#1}}
+		\newcommand{\Bprb}[1]{\mathbb{P}\Bparen{#1}}
+		\newcommand{\bgprb}[1]{\mathbb{P}\bgparen{#1}}
+		\newcommand{\Bgprb}[1]{\mathbb{P}\Bgparen{#1}}
 	\DeclareMathOperator{\mep}{\mathbb{E}} % Mathematical expectation.
 	\newcommand{\mch}{\mathds{1}} % Characterization function.
 	\DeclareMathOperator{\var}{var} % Variance.
