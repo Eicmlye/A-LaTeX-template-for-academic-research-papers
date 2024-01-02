@@ -14,8 +14,8 @@
 	\newcommand{\eusp}[1]{\mathbb{R}^{#1}} % Euclidean space
 	
 	%% functions
-	\newcommand{\mbeta}[2]{\bm{\mathrm{B}}\mpa{#1,#2}} % Math Beta function
-	\newcommand{\mgamma}[1]{\bm{\Gamma}\mpa{#1}} % Math Gamma function
+	\newcommand{\mbeta}[2]{\bm{\mathrm{B}}\mparen{#1,#2}} % Math Beta function
+	\newcommand{\mgamma}[1]{\bm{\Gamma}\mparen{#1}} % Math Gamma function
 
 % Constants.
 	\newcommand{\mathe}{\mathrm{e}}
@@ -139,9 +139,9 @@
 	
 	%% rings
 	\DeclareMathOperator*{\gcdOPR}{gcd} % aux
-	\renewcommand{\gcd}[1]{\gcdOPR\mpa{#1}}
+	\renewcommand{\gcd}[1]{\gcdOPR\mparen{#1}}
 	\DeclareMathOperator*{\lcmOPR}{lcm} % aux
-	\newcommand{\lcm}[1]{\lcmOPR\mpa{#1}}
+	\newcommand{\lcm}[1]{\lcmOPR\mparen{#1}}
 	\newcommand{\divi}[2]{\left.#1\ \middle|\ #2\right.} % Divisible.
 	
 	%% group theory
@@ -160,8 +160,11 @@
 	\newcommand{\tco}[1]{\tilde{u}^{#1}}
 	\newcommand{\crs}[3]{\Gamma_i^j\ _k} % Christoffel notation of the 2nd kind.
 	
+% Topology
+	\DeclareMathOperator{\Int}{\mathrm{Int}} % Internal.
+	
 % Probability.
-	\newcommand{\prb}[1]{\mathbb{P}\mpa{#1}}
+	\newcommand{\prb}[1]{\mathbb{P}\mparen{#1}}
 		\newcommand{\bprb}[1]{\mathbb{P}\bparen{#1}}
 		\newcommand{\Bprb}[1]{\mathbb{P}\Bparen{#1}}
 		\newcommand{\bgprb}[1]{\mathbb{P}\bgparen{#1}}
